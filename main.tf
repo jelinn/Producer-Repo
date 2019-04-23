@@ -131,14 +131,6 @@ resource "tfe_variable" "development_aws_secret_key" {
   workspace_id = "${tfe_workspace.development.id}"
 }
 
-resource "tfe_variable" "staging_aws_secret_key" {
-  key          = "AWS_SECRET_ACCESS_KEY"
-  value        = "${var.aws_secret_key}"
-  category     = "env"
-  sensitive    = "true"
-  workspace_id = "${tfe_workspace.staging.id}"
-}
-
 resource "tfe_variable" "development_aws_region" {
   key          = "AWS_REGION"
   value        = "us-east-2"
