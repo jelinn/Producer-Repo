@@ -147,12 +147,12 @@ resource "tfe_variable" "production_aws_region" {
   workspace_id = "${tfe_workspace.production.id}"
 }
 
-resource "tfe_variable" "aws_region" {
+resource "tfe_variable" "staging_aws_region" {
   key          = "AWS_REGION"
   value        = "us-east-2"
   category     = "env"
   sensitive    = "false"
-  workspace_id = "${tfe_workspace.production.id}"
+  workspace_id = "${tfe_workspace.staging.id}"
 }
 
 resource "tfe_variable" "workspace_var_staging" {
