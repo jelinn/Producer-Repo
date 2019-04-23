@@ -145,6 +145,7 @@ resource "tfe_variable" "development_aws_region" {
   category     = "env"
   sensitive    = "false"
   workspace_id = "${tfe_workspace.development.id}"
+}
 
 resource "tfe_variable" "production_aws_region" {
   key          = "AWS_REGION"
@@ -152,6 +153,7 @@ resource "tfe_variable" "production_aws_region" {
   category     = "env"
   sensitive    = "false"
   workspace_id = "${tfe_workspace.production.id}"
+}
 
 resource "tfe_variable" "aws_region" {
   key          = "AWS_REGION"
@@ -159,6 +161,7 @@ resource "tfe_variable" "aws_region" {
   category     = "env"
   sensitive    = "false"
   workspace_id = "${tfe_workspace.production.id}"
+}
 
 resource "tfe_variable" "workspace_var_staging" {
   key      = "workspace_name"
